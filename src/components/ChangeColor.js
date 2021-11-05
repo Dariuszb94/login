@@ -13,7 +13,7 @@ export const ChangeColor = () => {
         }}
       />
       <button
-        onCLick={() => {
+        onClick={() => {
           dispatch(changeColor(color));
         }}
       >
