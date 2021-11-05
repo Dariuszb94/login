@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { changeColor, ChangeColor } from "../features/theme";
 export const ChangeColor = () => {
   const [color, setColor] = useState("");
+  const dispatch = useDispatch();
   return (
     <div>
       <input
@@ -10,7 +12,13 @@ export const ChangeColor = () => {
           setColor(event.target.value);
         }}
       />
-      <button>CHANGE COLOR</button>
+      <button
+        onCLick={() => {
+          dispatch(changeColor(color));
+        }}
+      >
+        CHANGE COLOR
+      </button>
     </div>
   );
 };
