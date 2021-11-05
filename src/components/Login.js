@@ -12,6 +12,13 @@ function Login() {
       >
         Login
       </button>
+      <button
+        onClick={() => {
+          dispatch(logout());
+        }}
+      >
+        Logout
+      </button>
     </div>
   );
 }
