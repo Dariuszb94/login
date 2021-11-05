@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const ChangeColor = () => {
+  const [color, setColor] = useState("");
   return (
     <div>
-      <input type="text" />
+      <input
+        type="text"
+        onChange={(event) => {
+          setColor(event.target.value);
+        }}
+      />
       <button>CHANGE COLOR</button>
     </div>
   );
